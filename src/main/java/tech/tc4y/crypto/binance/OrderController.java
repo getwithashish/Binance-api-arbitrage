@@ -2,6 +2,9 @@ package tech.tc4y.crypto.binance;
 
 import java.util.ArrayList;
 
+import tech.tc4y.crypto.binance.data.GetExchangeInfo;
+import tech.tc4y.crypto.binance.parsers.ExchangeInfoJsonParse;
+
 public class OrderController {
 
 	public static void main(String args[]) throws Exception {
@@ -18,5 +21,12 @@ public class OrderController {
 			System.out.println(symbol + ", ");
 		}
 		System.out.println("Number of Tradable Pairs: "+ allTradablePairs.size());
+		
+		ArrayList<String> allTradableQuoteSymbols = exchangeInfoJsonParse.getTradableSpotQuoteAssetSymbols("BNB");
+		System.out.println("All Quote Assets associated with BNB: \n");
+		for (String symbol : allTradableQuoteSymbols) {
+			System.out.println(symbol + ", ");
+		}
+		System.out.println("Number of Quote Symbols: "+ allTradableQuoteSymbols.size());
 	}
 }

@@ -1,4 +1,4 @@
-package tech.tc4y.crypto.binance;
+package tech.tc4y.crypto.binance.parsers;
 
 import java.util.ArrayList;
 
@@ -18,8 +18,14 @@ public class ExchangeInfoJsonParse {
 	}
 	
 	public ArrayList<String> getTradableSpotAssetPairs(String assetSymbol) {
-		GetAssetPairs getAssetPairs = new GetAssetPairs(jsonObject);
-		ArrayList<String> tradableSpotAssetPairs = getAssetPairs.getAllTradableSpotAssetPairs(assetSymbol);
+		ParseAssetPairs parseAssetPairs = new ParseAssetPairs(jsonObject);
+		ArrayList<String> tradableSpotAssetPairs = parseAssetPairs.getAllTradableSpotAssetPairs(assetSymbol);
 		return tradableSpotAssetPairs;
+	}
+	
+	public ArrayList<String> getTradableSpotQuoteAssetSymbols(String baseAssetSymbol){
+		ParseAssetSymbols parseAssetSymbols = new ParseAssetSymbols(jsonObject);
+		ArrayList<String> tradableSpotQuoteAssetSymbols = parseAssetSymbols.getAllTradableSpotQuoteAssetSymbols(baseAssetSymbol);
+		return tradableSpotQuoteAssetSymbols;
 	}
 }

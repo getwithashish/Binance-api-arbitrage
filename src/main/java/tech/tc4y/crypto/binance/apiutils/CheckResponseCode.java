@@ -1,4 +1,4 @@
-package tech.tc4y.crypto.binance;
+package tech.tc4y.crypto.binance.apiutils;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

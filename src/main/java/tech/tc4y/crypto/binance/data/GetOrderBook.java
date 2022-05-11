@@ -1,4 +1,4 @@
-package tech.tc4y.crypto.binance;
+package tech.tc4y.crypto.binance.data;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -6,6 +6,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.logging.Logger;
+
+import tech.tc4y.crypto.binance.apiutils.CheckResponseCode;
+import tech.tc4y.crypto.binance.apiutils.MakeApiConnection;
+import tech.tc4y.crypto.binance.apiutils.MakeUrl;
 
 public class GetOrderBook {
 	

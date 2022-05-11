@@ -1,4 +1,4 @@
-package tech.tc4y.crypto.binance;
+package tech.tc4y.crypto.binance.apiutils;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
